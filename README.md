@@ -16,25 +16,11 @@ What things you need to install the software and how to install them
 - [PostgreSQL](https://docs.postgresql.org) and [psycopg](https://www.psycopg.org/)
 - Any other dependencies listed in requirements.txt
 
-### Initial setup
-
-You need to have python, django and virtualenv installed first
-`pip install virtualenv`
-
-making and activating the virtual environment
-`virtuenv project-amayo`
-
-Activate virtual environment
-`source env/bin/activate`
-
-Install django with virtual environment active
-`pip install django`
-
 ### Installing
 
 A step by step series of examples that tell you how to get a development env running
 
-1. Clone the repository
+1. Clone the repository using
 
 `git clone https://github.com/amsuncode/project-amayo.git`
 
@@ -42,16 +28,25 @@ OR
 
  `git clone git@github.com:amsuncode/project-amayo.git` if using SSH
 
-2. Install the dependencies
+2. You need to activate a virtual environment for the project, and every other time you want to make changes
 
-`pip install -r requirements.txt`
+ Here, [venv](https://docs.python.org/3/tutorial/venv.html) is included with python.
+
+ Start with `python3 -m venv [replace with what you would like to call the virtual environment]`. You can do `python3 -m venv amayo`
+
+ Activate virtual environment using what you call your virtual environment. Ours was `amayo`
+
+`source amayo/bin/activate`
+
+ Then install requirements using `pip install -r requirements.txt`
 
 3. Run migrations
 
 `python manage.py makemigrations`
+
 `python manage.py migrate`
 
-4. Run the server, inside `project-amayo/amayo`
+4. Run the server, inside `project-amayo/amayo/`
 
 `python manage.py runserver`
 
