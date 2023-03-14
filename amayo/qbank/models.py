@@ -1,10 +1,22 @@
 from django.db import models
 from django.contrib.auth.models import User
 from datetime import date
+from django.utils import timezone
 
 #Q-bank segment
 
-# Course, Topic, and Resource models for organizing course content
+class qBank(models.Model):
+    questionId = models.CharField(max_length=100)
+    questionText = models.TextField()
+    options = models.CharField(max_length=100)
+    created = models.DateTimeField(auto_now_add=True)
+    updated = models.DateTimeField(auto_now=True)
+    yearOfStudy = models.IntegerField()
+    unit = models.CharField(max_length=100)
+    questionType = models.CharField(max_length=100)
+
+
+""" Course, Topic, and Resource models for organizing course content
 class Course(models.Model):
     name = models.CharField(max_length=100) # Name of the course
     description = models.TextField() # Description of the course
@@ -193,3 +205,4 @@ class Philosophy(models.Model):
 
     def __str__(self):
         return f'{self.author}: {self.quote}'
+        """
