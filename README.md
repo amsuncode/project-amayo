@@ -39,6 +39,17 @@ OR
 `source amayo/bin/activate`
 
  Then install requirements using `pip install -r requirements.txt`
+ 
+ If you are using Windows and encounter an error, then try the below process:
+ Go to the terminal - Step 1:
+ `pip3 install -U pip virtualenv`
+ Step 2:
+ `virtualenv --system-site-packages -p python ./venv`
+ or
+ `virtualenv --system-site-packages -p python3 ./venv`
+ Step 3:
+ `.\venv\activate`
+ 
 
 3. Run migrations
 
