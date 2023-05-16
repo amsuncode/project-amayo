@@ -76,8 +76,10 @@ WSGI_APPLICATION = "amayo.wsgi.application"
 
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": "amayodb",
+        "USER": "amayoadmin",
+        "PASSWORD": "@_amayodev_#"
     }
 }
 
